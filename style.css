@@ -1,0 +1,429 @@
+/*1. Fuente e Iniciación Global . Importa la fuente "Poppins" desde Google Fonts en distintos pesos (400 a 800).*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*Aplica estas reglas a todos los elementos:
+
+margin y padding en 0 (elimina espacios por defecto).
+
+box-sizing: border-box hace que el padding y borde no afecten el ancho/alto total.
+
+text-decoration: none elimina subrayados en links.
+
+list-style: none elimina viñetas de listas.*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none ;
+    list-style:none;
+}
+
+
+/*2. Estilo General del Body .Usa la fuente Poppins para todo el cuerpo del documento.
+
+Aplica un fondo negro.*/
+body{
+    font-family:'Poppins', sans-serif;
+    background-color: black;
+}
+
+/*3. Contenedor General . Define un ancho máximo de 1200px y lo centra horizontalmente (margin: auto).*/
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+/*4. Header / Encabezado Principal*/
+.header{
+    background-image: url(images/bg.jpg);
+    background-position: top center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+/*Usa una imagen de fondo centrada y sin repetirse.
+
+La altura mínima es del 70% de la ventana.
+
+El contenido se centra vertical y horizontalmente.
+
+El texto se alinea al centro.*/
+}
+
+
+/*5. Menú de Navegación*/
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #040404;
+    border-bottom:1px solid #FFFFFF29;
+/*El menú queda fijo arriba del contenido (position: absolute).
+
+Ocupa todo el ancho (left: 0; right: 0).
+
+Se distribuyen elementos al centro y extremos (flex).
+
+Aparece encima de todo (z-index: 1000).
+
+Fondo negro con borde inferior semitransparente.*/
+}
+
+/* 6. Logo*/
+.logo {
+color: #A70A15;
+font-size: 25px;
+font-weight: 800;
+/*Texto del logo en rojo oscuro, grande y en negrita.*/
+
+}
+
+/*7. Enlaces del Menú*/
+.menu.navbar ul li {
+    position: relative;
+    float: left;
+
+}
+
+
+.menu.navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+
+}
+
+
+.menu.navbar ul li a:hover{
+    color:#E1160D;
+
+}
+/*Muestra cada enlace en línea horizontal (float: left).
+
+Texto blanco, con padding generoso.
+
+Al pasar el mouse, se vuelve rojo.*/
+
+
+/* Ícono de hamburguesa */
+.menu-label {
+    
+    cursor: pointer;
+    padding: 20px;
+}
+
+.menu-icono {
+    width: 30px;
+    height: auto;
+}
+
+
+
+/*El checkbox para el menú móvil está oculto.
+
+Imagen del ícono del menú (hamburguesa).
+
+El label que activa el menú solo aparece en móvil (ver abajo en media query).*/
+
+
+/*9. Texto Principal del Header*/
+
+.header-info h1{
+    color: #E1160D;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header-info p{
+    color:#FFFFFF;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+/*Título rojo, en mayúsculas, con separación entre letras.
+
+Párrafo en blanco, capitalizado (primera letra de cada palabra).*/
+
+
+
+/*10. Botón principal (Empieza)*/
+
+.btn-1{
+    display:inline-block;
+    padding:10px 35px;
+    border-radius: 10px;
+    background-color: #E1160D;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #A70A15;
+}
+
+/*Botón rojo con letras blancas, redondeado.
+
+Cambia a rojo oscuro al pasar el mouse.*/
+
+/*11. Sección Gym*/
+.gym{
+    padding:100px 0;
+    display:flex;
+    align-items: center;
+
+}
+
+.gym-1{
+    width: 50%;
+    padding-right: 150px;
+}
+
+/*Sección con espacio arriba y abajo.
+
+Flexbox para alinear texto e imágenes.
+
+El texto ocupa la mitad del ancho, con margen derecho.*/
+
+/*12. Título, Párrafo y Botón de Gym*/
+.gym-1 h2 {
+font-size: 40px;
+color: #FFFFFF;
+text-transform: uppercase;
+font-weight: 600;
+margin-bottom: 35px;
+}
+
+.gym-1 p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 35px;
+}
+
+.gym-1 span {
+    color:#A70A15;
+}
+
+.btn-2 {
+    display:inline-block;
+    padding: 8px 45px;
+    border-radius: 20px;
+    background-color: #E1160D;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.btn-2:hover{
+    background-color: #A70A15;
+}
+
+/*Título blanco en mayúsculas.
+
+Párrafo gris claro.
+
+Palabra resaltada (<span>) en rojo oscuro.
+
+Botón similar al anterior, pero más pequeño.*/
+
+
+
+/*13. Imágenes del Gym*/
+
+.img-1, .img-2 {
+    width:250px;
+    margin-right: 30px;
+}
+/*Cada imagen mide 250px de ancho y tiene espacio a la derecha.*/
+
+
+/*14. Footer / Pie de Página*/
+.footer {
+    border-top:1px solid #FFFFFF29;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #040404;
+}
+
+.footer h3 {
+    color: #A70A15;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.links ul {
+    display:flex;
+}
+
+.links ul li {
+    margin-right: 35px;
+}
+
+.links ul li a {
+    color: #818181;
+}
+
+/* Estilo para el ícono del menú en móviles */
+.menu-label {
+    display: none; /* Se oculta por defecto en escritorio */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    padding: 20px;
+}
+
+/* Ocultamos el checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Menú de navegación por defecto (escritorio) */
+.navbar ul {
+    display: flex; /* Muestra los elementos en fila */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+/*Footer con borde superior y fondo oscuro.
+
+Texto del logo en rojo oscuro.
+
+Lista horizontal de enlaces con margen entre ellos.*/
+
+
+/* -------------------------------------------
+Responsive - Menú para dispositivos móviles
+   ------------------------------------------- */
+
+
+/*15. Media Query (Responsive para pantallas pequeñas)*/
+
+@media(max-width:991px){
+    .menu{
+        padding: initial;
+    }
+
+    .menu.navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+        display:none;
+    }
+
+    .menu.navbar ul li {
+        width:100%;
+    }
+#menu:checked ~ .navbar {
+    display:initial;
+}
+
+.header-content{
+    padding:30px;
+}
+
+.header-info h1{
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.gym {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.gym-1 {
+    width: 100%;
+    padding:0;
+    order:1;
+}
+
+.gym-1 h2 {
+    margin-bottom: 15px;
+}
+
+.btn-2 {
+margin-bottom: 35px;
+}
+
+.gym-2 {
+    order: 2;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-1, img-2 {
+    margin: 0 0 20px 0;
+}
+
+.footer {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+
+}
+
+.links ul li {
+    margin: 0 10px;
+}
+
+
+/* Modo móvil: cuando el ancho de la pantalla sea 768px o menor */
+@media (max-width: 768px) {
+
+    .menu-label {
+        display: block; /* Mostramos el ícono de menú */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%; /* Justo debajo del menú */
+        left: 0;
+        right: 0;
+        background-color: #040404;
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Los enlaces van en columna */
+        gap: 15px;
+    }
+
+    /* Si el checkbox está marcado (activo), muestra el menú */
+    .menu-toggle:checked ~ .menu-label + .navbar {
+        display: flex;
+    }
+}
+/*bloque adapta todo para pantallas pequeñas (como celulares):
+
+Menú pasa a ser desplegable.
+
+Contenido se centra y cambia a columnas (flex-direction: column).
+
+Imágenes y textos ocupan 100% del ancho.
+
+Footer se muestra en columna.*/
+}
